@@ -92,6 +92,7 @@ int main(int, char**)
     // https://skia.googlesource.com/external/github.com/ocornut/imgui/+/v1.50/extra_fonts/README.txt
     ImFontConfig config;
     config.OversampleH = 3;
+    config.OversampleV = 3;
     //io.Fonts->AddFontDefault();
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("fonts\\hasklig\\Hasklig-Black.ttf", 19.0f, &config);
