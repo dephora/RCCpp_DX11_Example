@@ -75,6 +75,7 @@ int main(int, char**)
     // Setup Platform/Renderer bindings
     ImGui_ImplWin32_Init(hwnd);
     ImGui_ImplDX11_Init(g_SystemTable.pd3dDevice, g_SystemTable.pd3dDeviceContext);
+    
 
     // set system table variables for ImGui and ImGui_Impl
     g_SystemTable.pImContext = ImGui::GetCurrentContext();
