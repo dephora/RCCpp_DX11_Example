@@ -216,7 +216,7 @@ namespace ImGui
 #define BG(v)   ImVec4(0.009f, 0.010f, 0.012f, v)
 // text
 //#define TEXT(v) ImVec4(0.860f, 0.930f, 0.890f, v)
-#define TEXT(v) ImVec4(0.99f, 0.992f, 0.99f, v)
+#define TEXT(v) ImVec4(1.0f, 1.0f, 1.0f, v)
 
         auto& style = ImGui::GetStyle();
         style.Colors[ImGuiCol_Text] = TEXT(1.0f);
@@ -264,9 +264,9 @@ namespace ImGui
         // [...]
         style.Colors[ImGuiCol_ModalWindowDarkening] = BG(0.73f);
 
-        style.WindowPadding = ImVec2(6, 4);
+        style.WindowPadding = ImVec2(8, 6);
         style.WindowRounding = 0.0f;
-        style.FramePadding = ImVec2(5, 2);
+        style.FramePadding = ImVec2(6, 2);
         style.FrameRounding = 3.0f;
         style.ItemSpacing = ImVec2(7, 1);
         style.ItemInnerSpacing = ImVec2(1, 1);
@@ -279,7 +279,8 @@ namespace ImGui
 
         style.WindowTitleAlign.x = 0.50f;
 
-        style.Colors[ImGuiCol_Border] = ImVec4(0.539f, 0.479f, 0.255f, 0.162f);
+        //style.Colors[ImGuiCol_Border] = ImVec4(0.539f, 0.479f, 0.255f, 0.162f);
+        style.Colors[ImGuiCol_Border] = BG(1.0f);
         style.FrameBorderSize = 0.0f;
         style.WindowBorderSize = 0.0f;
     }

@@ -13,6 +13,8 @@
 #include <dinput.h>
 #include <tchar.h>
 
+// directxtk headers - coming soon
+
 // RCC++ headers
 #include "RuntimeObjectSystem.h"
 
@@ -60,14 +62,15 @@ int main(int, char**)
     IMGUI_CHECKVERSION();
     ImGui::CreateContext();
     ImGuiIO& io = ImGui::GetIO(); (void)io;
-    //io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
+    io.ConfigFlags |= ImGuiConfigFlags_NavEnableKeyboard;     // Enable Keyboard Controls
     //io.ConfigFlags |= ImGuiConfigFlags_NavEnableGamepad;      // Enable Gamepad Controls
 
     // Setup Dear ImGui style
     //ImGui::StyleColorsDark();
     ImGui::DephoraTheme();
+    
     ImGuiStyle& style = ImGui::GetStyle();
-    style.ScaleAllSizes(1.25f);
+    style.ScaleAllSizes(1.50f);
 
     // Setup Platform/Renderer bindings
     ImGui_ImplWin32_Init(hwnd);
@@ -86,10 +89,18 @@ int main(int, char**)
     // - The fonts will be rasterized at a given size (w/ oversampling) and stored into a texture when calling ImFontAtlas::Build()/GetTexDataAsXXXX(), which ImGui_ImplXXXX_NewFrame below will call.
     // - Read 'docs/FONTS.txt' for more instructions and details.
     // - Remember that in C/C++ if you want to include a backslash \ in a string literal you need to write a double backslash \\ !
+    // https://skia.googlesource.com/external/github.com/ocornut/imgui/+/v1.50/extra_fonts/README.txt
+    ImFontConfig config;
+    config.OversampleH = 3;
     //io.Fonts->AddFontDefault();
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Roboto-Medium.ttf", 16.0f);
-    //io.Fonts->AddFontFromFileTTF("fonts\\hasklig\\Hasklig-Regular.ttf", 17.0f);
-    io.Fonts->AddFontFromFileTTF("fonts\\Roboto-Medium.ttf", 16.0f);
+    //io.Fonts->AddFontFromFileTTF("fonts\\hasklig\\Hasklig-Black.ttf", 19.0f, &config);
+    //io.Fonts->AddFontFromFileTTF("fonts\\hasklig\\Hasklig-SemiBold.ttf", 18.0f, &config);
+    //io.Fonts->AddFontFromFileTTF("fonts\\source-code-pro\\ttf\\SourceCodePro-Semibold.ttf", 18.0f, &config);
+    io.Fonts->AddFontFromFileTTF("fonts\\source-code-pro\\ttf\\SourceCodePro-Bold.ttf", 19.0f, &config);
+    //io.Fonts->AddFontFromFileTTF("fonts\\Roboto-Medium.ttf", 17.0f, &config);
+   
+    //io.Fonts->AddFontFromFileTTF("fonts\\Karla-Regular.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/Cousine-Regular.ttf", 15.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/DroidSans.ttf", 16.0f);
     //io.Fonts->AddFontFromFileTTF("../../misc/fonts/ProggyTiny.ttf", 10.0f);
