@@ -36,7 +36,7 @@
     <ClInclude Include="SystemTable.h">
       <Filter>RuntimeCompiled</Filter>
     </ClInclude>
-    <ClInclude Include="ImgGuiThemes.h">
+    <ClInclude Include="utils\ImgGuiThemes.h">
       <Filter>imgui</Filter>
     </ClInclude>
   </ItemGroup>

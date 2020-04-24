@@ -5,7 +5,9 @@
 #include "imgui.h"
 #include "imgui_impl_win32.h"
 #include "imgui_impl_dx11.h"
-#include "ImgGuiThemes.h"
+
+// imgui extra
+#include "utils/ImgGuiThemes.h"
 
 // directx headers
 #include <d3d11.h>
@@ -14,6 +16,7 @@
 #include <tchar.h>
 
 // directxtk headers - coming soon
+#include <cassert>
 
 // RCC++ headers
 #include "RuntimeObjectSystem.h"

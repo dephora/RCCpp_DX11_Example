@@ -94,7 +94,7 @@ struct RCCppMainLoop : RCCppMainLoopI, TInterface<IID_IRCCPP_MAIN_LOOP,IObject>
         ImGui::SetNextWindowPos(ImVec2(50,400), ImGuiCond_Appearing );
         ImGui::SetNextWindowSize(ImVec2(0,0), ImGuiCond_Always );
         ImGui::Begin("RCCppMainLoop Window" );
-        ImGui::Text("You can change Window's code at runtime!");
+        ImGui::Text("You can change Window's code at runtime?!");
         ImGui::End();
 
         
@@ -227,6 +227,11 @@ struct RCCppMainLoop : RCCppMainLoopI, TInterface<IID_IRCCPP_MAIN_LOOP,IObject>
 
         // Rendering
         ImGui::Render();
+
+        // ADD D3D Code here ?
+        /*HRESULT hr = someDirect3DFunction();
+        assert(SUCCEEDED(hr));*/
+
         g_pSys->pd3dDeviceContext->OMSetRenderTargets(1, &g_pSys->pMainRenderTargetView, NULL);
         g_pSys->pd3dDeviceContext->ClearRenderTargetView( g_pSys->pMainRenderTargetView, (float*)&clear_color);
 
@@ -254,7 +259,7 @@ struct RCCppMainLoop : RCCppMainLoopI, TInterface<IID_IRCCPP_MAIN_LOOP,IObject>
         sd.BufferDesc.Width = 0;
         sd.BufferDesc.Height = 0;
         sd.BufferDesc.Format = DXGI_FORMAT_R8G8B8A8_UNORM;
-        sd.BufferDesc.RefreshRate.Numerator = 60;
+        sd.BufferDesc.RefreshRate.Numerator = 0;  // was 60
         sd.BufferDesc.RefreshRate.Denominator = 1;
         sd.Flags = DXGI_SWAP_CHAIN_FLAG_ALLOW_MODE_SWITCH;
         sd.BufferUsage = DXGI_USAGE_RENDER_TARGET_OUTPUT;
