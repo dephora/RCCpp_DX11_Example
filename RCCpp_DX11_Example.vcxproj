@@ -149,6 +149,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClInclude Include="ImgGuiThemes.h" />
     <ClInclude Include="imgui\imconfig.h" />
     <ClInclude Include="imgui\imgui.h" />
     <ClInclude Include="imgui\imgui_internal.h" />
@@ -172,6 +173,17 @@
   <ItemGroup>
     <None Include="imgui\misc\natvis\imgui.natvis" />
     <None Include="imgui\examples\README.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="fonts\hasklig\Hasklig-Black.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-BlackIt.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-BoldIt.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-It.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-Medium.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-MediumIt.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-Regular.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-Semibold.ttf" />
+    <Font Include="fonts\hasklig\Hasklig-SemiboldIt.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

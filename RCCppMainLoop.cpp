@@ -38,12 +38,14 @@ enum InterfaceIDEnumConsoleExample
     IID_ENDInterfaceIDEnumConsoleExample
 };
 
+
+
 struct RCCppMainLoop : RCCppMainLoopI, TInterface<IID_IRCCPP_MAIN_LOOP,IObject>
 {
     // Our state - now members of RCCppMainLoop
     bool   show_demo_window    = true;
     bool   show_another_window = false;
-    ImVec4 clear_color         = ImVec4(0.45f, 0.55f, 0.60f, 1.00f);
+    ImVec4 clear_color         = ImVec4(0.01f, 0.01f, 0.01f, 1.00f);
     float  f                   = 0.0f;
     int    counter             = 0;
 
@@ -52,6 +54,8 @@ struct RCCppMainLoop : RCCppMainLoopI, TInterface<IID_IRCCPP_MAIN_LOOP,IObject>
     double compileStartTime    = -SHOW_AFTER_COMPILE_TIME;
     double compileEndTime      = -SHOW_AFTER_COMPILE_TIME;
     unsigned int compiledModules = 0;
+
+    
 
     RCCppMainLoop()
     {
